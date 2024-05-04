@@ -1,0 +1,375 @@
+body {
+    font-family: cursive;
+    color: black;
+    text-align: center;
+    background-color: rgb(248, 244, 244);
+    margin: 0;
+}
+
+header {
+    background-color: darkorchid;
+    color: aliceblue;
+    height: 150px;
+    margin: 0; 
+}
+
+footer {
+
+    background-color: darkorchid;
+    padding: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.description {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-block;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.logo-image {
+    height: 150px;
+    width: 150px;
+    margin-top: 0;
+    margin-left: 0;
+    float: left;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.topnav {
+    background-color: darkorchid;
+    overflow: hidden;
+}
+
+.cafe-image {
+    margin: 0;
+    width: 100%;
+}
+.text{
+    color: black;
+    font-size: 3em;
+    text-align: left;
+}
+.first_div{
+    
+    width: 50%;
+    text-align: center;
+    flex: 1;
+    align-items: center;
+}
+.second_div{
+    
+    width: 50%;
+    flex: 1;
+}
+.third_div{
+    
+    width: 50%;
+    text-align: center;
+    
+}
+.fourth_div{
+    width: 50%;
+    text-align: center;
+    align-items: center;
+}
+.display1, .display2{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+}
+.break1, .break2, .break3, .break4, .break5, .break6, .break7, .break8 {
+    width: 24%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Soft background color */
+    margin: 0.3%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.break1 img, .break2 img, .break3 img, .break4 img, .break5 img, .break6 img, .break7 img, .break8 img {
+    margin-bottom: 10px; /* Add margin below the image */
+    border-radius: 5px; /* This is so that it gives the images a soft look*/
+}
+
+.break1 button, .break2 button, .break3 button, .break4 button, .break5 button, .break6 button, .break7 button, .break8 button {
+    background-color: darkorchid; /* purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ /* Define the hover effect for the 8 of the breaks */
+ .break1:hover h2, .break2:hover h2, .break3:hover h2, .break4:hover h2, .break5:hover h2, .break6:hover h2, .break7:hover h2, .break8:hover h2 {
+    color: darkorchid; /* Change the color to purple when hovered */
+}
+ /* Define the hover effect for 8-16  */
+ .break9:hover h2, .break10:hover h2, .break11:hover h2, .break12:hover h2, .break13:hover h2, .break14:hover h2, .break15:hover h2, .break16:hover h2 {
+    color: darkorchid; /* Change the color to purple when hovered */
+}
+ /* Define the hover effect for 16-24  */
+ .break17:hover h2, .break18:hover h2, .break19:hover h2, .break20:hover h2, .break21:hover h2, .break22:hover h2, .break23:hover h2, .break24:hover h2 {
+    color: darkorchid; /* Change the color to purple when hovered */
+}
+ /* Define the hover effect for 24-32 */
+ .break25:hover h2, .break26:hover h2, .break27:hover h2, .break28:hover h2, .break29:hover h2, .break30:hover h2, .break31:hover h2, .break32:hover h2 {
+    color: darkorchid; /* Change the color to purple when hovered */
+}
+main_div{
+    display: block;
+}
+.wrapper{
+    flex-grow: 1;
+}
+sec_div{
+    display: block;
+}
+/* breaks for my lunch options*/
+.break9, .break10, .break11, .break12, .break13, .break14, .break15, .break16 {
+    width: 24%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Soft background color */
+    margin: 0.3%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.break9 img, .break10 img, .break11 img, .break12 img, .break13 img, .break14 img, .break15 img, .break16 img {
+    margin-bottom: 10px; /* Add margin below the image */
+    border-radius: 5px; /* This is so that it gives the images a soft look*/
+}
+
+.break9 button, .break10 button, .break11 button, .break12 button, .break13 button, .break14 button, .break15 button, .break16 button {
+    background-color: darkorchid; /* purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* breaks for my dinner options*/
+.break17, .break18, .break19, .break20, .break21, .break22, .break23, .break24 {
+    width: 24%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Soft background color */
+    margin: 0.3%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.break17 img, .break18 img, .break19 img, .break20 img, .break21 img, .break22 img, .break23 img, .break24 img {
+    margin-bottom: 10px; /* Add margin below the image */
+    border-radius: 5px; /* This is so that it gives the images a soft look*/
+}
+
+.break17 button, .break18 button, .break19 button, .break20 button, .break21 button, .break22 button, .break23 button, .break24 button {
+    background-color: darkorchid; /* purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* breaks for my beverage options*/
+.break25, .break26, .break27, .break28, .break29, .break30, .break31, .break32 {
+    width: 24%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Soft background color */
+    margin: 0.3%;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.break25 img, .break26 img, .break27 img, .break28 img, .break29 img, .break30 img, .break31 img, .break32 img {
+    margin-bottom: 10px; /* Add margin below the image */
+    border-radius: 5px; /* This is so that it gives the images a soft look*/
+}
+
+.break25 button, .break26 button, .break27 button, .break28 button, .break29 button, .break30 button, .break31 button, .break32 button {
+    background-color: darkorchid; /* purple background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Some styling to make the buttons look more suited to the websites theme */
+#add-order {
+    background-color: darkorchid;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#calculate-total {
+    background-color: darkorchid;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#checkout-button {
+    background-color: darkorchid;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#submit-payment {
+    background-color: darkorchid;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+/* Increase font size for labels and select elements */
+label, select {
+    font-size: 16px; 
+}
+
+/* Increase padding for select elements */
+select {
+    padding: 8px; 
+}
+input {
+    padding: 8px; 
+}
+#linkf {
+    background-color: darkorchid;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+/* Contact us page styles */
+.image-text {
+    position: relative;
+    width: 1440px; /* or specify a fixed width */
+    height: 500px; /* or specify a fixed height */
+    background-image: url('/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/Images/purples.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  .text-block {
+    position: absolute;
+    bottom: 250px; /* position as needed */
+    left: 450px; /* position as needed */
+    color: lavenderblush;
+    font-size: 90px; /* adjust size as needed */
+    padding: 10px;
+  }
+
+.content-wrapper {
+    display: flex;
+    
+}
+.form-container, .location-info {
+    background: lavenderblush;
+    padding: 20px;
+    width: 40%; /* Adjust the width to suit your design */
+    
+}
+.field-label {
+    font-weight: bold;
+}
+.input-text,
+.input-email,
+.input-textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+.input-textarea {
+    height: 150px;
+}
+.submit-button {
+    background-color: rgb(221, 139, 221);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit-button:hover {
+    background-color:darkorchid;
+}
+.location-info {
+    /* Additional styles for location div, if needed */
+    background-color: lavenderblush;
+    width: 60%;
+}
+.map {
+    width: 650px;
+    height:550px
+}
+
+ /* Carousel container */
+ .carousel {
+    width: 500px; /* Adjust this value to change the size */
+    height: auto;
+}
+/* Container holding the images */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+/* Each image */
+.carousel-image {
+    min-width: 72%;
+}
+/* Navigation arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.left-arrow {
+    left: 10px;
+}
+.right-arrow {
+    right: 10px;
+}

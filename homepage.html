@@ -1,0 +1,80 @@
+<html>
+    <title> Hexa Cafe </title>
+    <head>
+        <link rel="stylesheet" href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/CSS/styles.css">
+    </head>
+    <body>
+    <header> 
+        <img src="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/Images/logos.png" class="logo-image">
+        <br>
+        <h1>Hexa Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/homepage.html">Home</a></li>
+                <li><a href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/thisisuspage.html">This is Us</a></li>
+                <li><a href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/menupage.html">Menu</a></li>
+                <li><a href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/orderpage.html"> Place Order</a></li>
+                <li><a href="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/contactuspage.html">Contact Us</a></li>
+            </ul>
+        </nav>  
+   
+     </header>
+        <figure class="cafe-image">
+            <img src="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/Images/Cafes.webp" width="1440" height="650">
+        </figure>
+        <!--div so I can add an image a side of the page of the page-->
+        <div class="display1">
+            <div class="first_div">
+                <h2 class="text" style="text-align: center;"> Eat!</h2>
+            <h3 style="color: black; font-size: 1.5em; text-align: center;"> Breakfast, Lunch and Dinner</h3>
+            <p style="color: black; font-size: 1.2em; text-align: center;"> Craving a delicous meal? Hexa Cafe provides a variety of different kinds of food you can enjoy on campus.</p>
+                <button id = "menu" style="text-align: center; height: 60px;  font-family: cursive; width: 140px; background-color: rgb(248, 244, 244);"> Menu</button>
+            </div>
+            <div class="second_div">
+                <img src="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/Images/Untitled 2.png" height="600px" width="720px">
+            </div>
+        </div>
+        <div class="display2">
+            <div class="third_div">
+                <img src="/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/Images/Coffee.jpg" height="587px" width="720px">
+            </div>
+
+            <div class="fourth_div">
+                <h2 class="text" style="text-align: center;"> Drink</h2>
+            <h3 style="color: black; font-size: 1.5em; text-align: center;"> "Fuel your day the right way"</h3>
+            <p style="color: black; font-size: 1.2em; text-align: center;"> This charming cafe serves a wide assortment of teas, pastries, and coffee drinks. Don't pass up this delicious delicacv!</p>
+                <button id ="drinks" style="text-align: center; height: 60px;  font-family: cursive; width: 140px; background-color: rgb(248, 244, 244);"> Beverages</button>
+            </div>
+        </div>
+        <!--Used two div structures to display some pictures to the side of it-->
+        <script>
+            // Get the menu button element
+            const menuButton = document.getElementById("menu");
+        
+            // Add a click event listener to the menu button
+            menuButton.addEventListener("click", function() {
+                // Redirect to another page
+                window.location.href = "/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/menupage.html#Menu";
+            });
+        
+            // Get the drinks button element
+            const drinksButton = document.getElementById("drinks");
+        
+            // Add a click event listener to the drinks button
+            drinksButton.addEventListener("click", function() {
+                // Redirect to another page
+                window.location.href = "/Users/macbookpro/Desktop/Assign4-5_Fathima_Afridi_19387/HTML/menupage.html#Drinks";
+            });
+        </script>
+        
+        <footer>
+            13850 University Blvd,
+            <br>
+            Sugar Land, TX 77479
+            <br><br>
+         ©2024 by Hexa Cafeteria All rights reserved. HexaCafeteria.com 
+    </footer>
+    </body>
+    
+
+</html>
