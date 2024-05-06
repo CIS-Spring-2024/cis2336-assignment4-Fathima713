@@ -1,0 +1,222 @@
+<html>
+    <title> Order Now </title>
+    <head>
+        <link rel="stylesheet" href="../CSS/styles.css">
+    </head>
+    <body>
+    <header> 
+        <img src="../Images/logos.png" class="logo-image">
+        <br>
+        <h1>Hexa Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="../HTML/homepage.html">Home</a></li>
+                <li><a href="../HTML/thisisuspage.html">This is Us</a></li>
+                <li><a href="../HTML/menupage.html">Menu</a></li>
+                <li><a href="../HTML/orderpage.html"> Place Order</a></li>
+                <li><a href="../HTML/contactuspage.html">Contact Us</a></li>
+            </ul>
+        </nav>  
+        </header>
+        <h1> Order Now </h1>
+        <!-- A select function is used to select items off the menu-->
+        <form id="order-form">
+            <div id="order-items">
+                <div class="order-item">
+                    <label for="item-select">Select an item:</label>
+                    <select class="item-select">
+                        <option value="5.99">Avocado Toast - $5.99</option>
+                        <option value="7.99">Steel-Cut Oatmeal - $7.99</option>
+                        <option value="9.99">Sunrise Granola Bowl - $9.99</option>
+                        <option value="4.99">Classic Benedict - $4.99</option>
+                        <option value="12.99">Smoked Salmon Roasted Vegetable Frittata - $12.99</option>
+                        <option value="8.99">French Toast - $8.99</option>
+                        <option value="6.99">Belgian Waffle - $6.99</option>
+                        <option value="11.99">Elevated Egg Sandwich - $11.99</option>
+                        <option value="10.99">Pesto Chicken Quinoa Bowl - $10.99</option>
+                        <option value="7.99">Chicken Avocado Chop Salad - $7.99</option>
+                        <option value="9.99">Cobb Salad - $9.99</option>
+                        <option value="13.99">Baja Turkey Burger - $13.99</option>
+                        <option value="11.99">Market Veggie Burger - $11.99</option>
+                        <option value="13.99">Roast Beef Melt - $13.99</option>
+                        <option value="14.99">Monterey Club Sandwich - $14.99</option>
+                        <option value="12.99">Veggie Burger - $12.99</option>
+                        <option value="8.99">Tomato Soup - $8.99</option>
+                        <option value="14.99">Chicken Burrito - $14.99</option>
+                        <option value="13.99">Beef Spaghetti - $13.99</option>
+                        <option value="12.99">Alfredo Chicken - $12.99</option>
+                        <option value="15.99">Orange Chicken - $15.99</option>
+                        <option value="14.99">Chicken Chowmein - $14.99</option>
+                        <option value="15.99">Chicken Biryani - $15.99</option>
+                        <option value="12.99">Butter Chicken - $12.99</option>
+                        <option value="3.99">Hot Caramel Macchiato - $3.99</option>
+                        <option value="4.99">Expresso - $4.99</option>
+                        <option value="3.99">Hot Chocolate - $3.99</option>
+                        <option value="4.99">Iced Tea - $4.99</option>
+                        <option value="3.99">Hot Tea - $3.99</option>
+                        <option value="5.99">Chocolate Mocha - $5.99</option>
+                        <option value="4.99">Iced Chai Latte - $4.99</option>
+                        <option value="3.99">Iced Matcha - $3.99</option>
+
+
+
+
+
+                        
+                        <!-- All the options of out of the menu items -->
+                    </select>
+    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="quantity" min="1" value="1">
+                </div>
+            </div>
+            <!-- Adding some space between the buttons and the select-->
+            <br><br>
+    
+            <button type="button" id="add-order">Add Another Item</button>
+            <button type="button" id="calculate-total">Calculate Total</button>
+            <button type="button" id="checkout-button">Checkout</button>
+
+    
+            <p>Total Price: <span id="total-price">$5.99</span></p>
+        </form>
+
+        <section id="checkout-section">
+            <h2>Checkout</h2>
+            <div>
+                <h3>Your Order</h3>
+                <!-- Display order details here -->
+                <p>Item: <span id="ordered-item"></span></p>
+                <p>Quantity: <span id="ordered-quantity"></span></p>
+
+            </div>
+            <div>
+                <h3>Payment Information</h3>
+                <!-- Payment form goes here -->
+                <label for="cardnumber">Card Number:</label>
+                <input type="text" placeholder="0000-0000-0000-0000" id="cardnumber" required>
+                <label for="expirationdate">Expiration Date:</label>
+                <input type="text" placeholder="MM-YY" id="expirationdate" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" placeholder="000"id="cvv" required>
+            </div>
+            <br>
+            <button type="button" id="submit-payment">Submit Payment</button>
+            <p id="payment-status"></p>
+            <p>Once payment is successful, your table number will be assigned, and an estimate of when your order will be ready will be provided.</p>
+        </section>
+    
+        <!-- JavaScript code to handle form submission and calculate total price -->
+        <script>
+            // Function to calculate total price
+            function calculateTotalPrice() {
+                let totalPrice = 0;
+    
+                document.querySelectorAll('.order-item').forEach(item => {
+                    const itemPrice = parseFloat(item.querySelector('.item-select').value);
+                    const quantity = parseInt(item.querySelector('.quantity').value);
+                    totalPrice += itemPrice * quantity;
+                });
+    
+                // Display total price
+                document.getElementById("total-price").innerText = "$" + totalPrice.toFixed(2);
+            }
+    
+            // Function to add another item input
+            function addOrderItem() {
+                const orderItems = document.getElementById('order-items');
+                const newItem = document.createElement('div');
+                newItem.classList.add('order-item');
+                newItem.innerHTML = `
+                    <label for="item-select">Select an item:</label>
+                    <select class="item-select">
+                        <option value="5.99">Avocado Toast - $5.99</option>
+                        <option value="7.99">Steel-Cut Oatmeal - $7.99</option>
+                        <option value="9.99">Sunrise Granola Bowl - $9.99</option>
+                        <option value="4.99">Classic Benedict - $4.99</option>
+                        <option value="12.99">Smoked Salmon Roasted Vegetable Frittata - $12.99</option>
+                        <option value="8.99">French Toast - $8.99</option>
+                        <option value="6.99">Belgian Waffle - $6.99</option>
+                        <option value="11.99">Elevated Egg Sandwich - $11.99</option>
+                        <option value="10.99">Pesto Chicken Quinoa Bowl - $10.99</option>
+                        <option value="7.99">Chicken Avocado Chop Salad - $7.99</option>
+                        <option value="9.99">Cobb Salad - $9.99</option>
+                        <option value="13.99">Baja Turkey Burger - $13.99</option>
+                        <option value="11.99">Market Veggie Burger - $11.99</option>
+                        <option value="13.99">Roast Beef Melt - $13.99</option>
+                        <option value="14.99">Monterey Club Sandwich - $14.99</option>
+                        <option value="12.99">Veggie Burger - $12.99</option>
+                        <option value="8.99">Tomato Soup - $8.99</option>
+                        <option value="14.99">Chicken Burrito - $14.99</option>
+                        <option value="13.99">Beef Spaghetti - $13.99</option>
+                        <option value="12.99">Alfredo Chicken - $12.99</option>
+                        <option value="15.99">Orange Chicken - $15.99</option>
+                        <option value="14.99">Chicken Chowmein - $14.99</option>
+                        <option value="15.99">Chicken Biryani - $15.99</option>
+                        <option value="12.99">Butter Chicken - $12.99</option>
+                        <option value="3.99">Hot Caramel Macchiato - $3.99</option>
+                        <option value="4.99">Expresso - $4.99</option>
+                        <option value="3.99">Hot Chocolate - $3.99</option>
+                        <option value="4.99">Iced Tea - $4.99</option>
+                        <option value="3.99">Hot Tea - $3.99</option>
+                        <option value="5.99">Chocolate Mocha - $5.99</option>
+                        <option value="4.99">Iced Chai Latte - $4.99</option>
+                        <option value="3.99">Iced Matcha - $3.99</option>
+                    </select>
+                    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" class="quantity" min="1" value="1">
+                `;
+                orderItems.appendChild(newItem);
+            }
+    
+            // Smooth scroll to the checkout section
+            document.getElementById("checkout-button").addEventListener("click", 
+            function() {
+            document.getElementById("checkout-section").scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Function to handle checkout
+            document.getElementById("checkout-button").addEventListener("click", function() {
+            // Display order details in the checkout section
+            const checkoutSection = document.getElementById("checkout-section");
+            checkoutSection.querySelector("#ordered-item").innerText = ""; // Clear previous data
+            checkoutSection.querySelector("#ordered-quantity").innerText = ""; // Clear previous data
+
+            document.querySelectorAll('.order-item').forEach(item => {
+            const selectedItem = item.querySelector('.item-select').selectedOptions[0].innerText;
+            const quantity = parseInt(item.querySelector('.quantity').value);
+            const orderedItemElement = document.createElement('p');
+            orderedItemElement.innerText = selectedItem;
+            const orderedQuantityElement = document.createElement('p');
+            orderedQuantityElement.innerText = "Quantity: " + quantity;
+
+            checkoutSection.querySelector("#ordered-item").appendChild(orderedItemElement);
+            checkoutSection.querySelector("#ordered-quantity").appendChild(orderedQuantityElement);
+            });
+            // Scroll to the checkout section
+            checkoutSection.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Added event listener to the "Calculate Total" button
+            document.getElementById("calculate-total").addEventListener("click", calculateTotalPrice);
+
+            // Added event listener to the "Add Another Item" button
+            document.getElementById("add-order").addEventListener("click", addOrderItem);
+
+        </script>
+
+
+
+<footer>
+    13850 University Blvd,
+    <br>
+    Sugar Land, TX 77479
+    <br><br>
+ ©2024 by Hexa Cafeteria All rights reserved. HexaCafeteria.com 
+</footer>
+
+        </body>
+
+        </html>
+        
